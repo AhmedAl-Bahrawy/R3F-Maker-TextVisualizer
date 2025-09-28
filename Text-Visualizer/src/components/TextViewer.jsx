@@ -1,4 +1,4 @@
-import { Text } from "@react-three/drei";
+import { Text, Float } from "@react-three/drei";
 import React, { useMemo } from "react";
 import Curve, { RequiredPoints } from "./Curve";
 
@@ -21,18 +21,20 @@ export default function TextViewer() {
     <>
       {RequiredPoints.map((p, i) => (
         <>
-          <group rotation={[0, Math.PI, 0]} position={RequiredPoints[i]}>
-            <Text
-              color={"white"}
-              anchorX={"center"}
-              anchorY={"middle"}
-              fontSize={1}
-            >
-              Hello World!{"\n"}
-              Are We Ready ?? {"\n"}
-              Nooo!
-            </Text>
-          </group>
+          <Float floatInstensity={0.05} speed={1.5} rotationIntensity={0.2}>
+            <group rotation={[0, Math.PI, 0]} position={RequiredPoints[i]}>
+              <Text
+                color={"white"}
+                anchorX={"center"}
+                anchorY={"middle"}
+                fontSize={1}
+              >
+                Hello World!{"\n"}
+                Are We Ready ?? {"\n"}
+                Nooo!
+              </Text>
+            </group>
+          </Float>
         </>
       ))}
       <group
