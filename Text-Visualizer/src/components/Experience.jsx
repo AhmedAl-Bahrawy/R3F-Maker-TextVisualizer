@@ -35,7 +35,7 @@ export default function Experience() {
 
   // ship speed (units per second)
   const shipSpeed = 20;
-  const canMove = true;
+  const canMove = false;
 
   // reusable vectors
   const tmpA = useMemo(() => new THREE.Vector3(), []);
@@ -102,7 +102,6 @@ export default function Experience() {
         spaceshipRef={spaceshipRef}
         useHelpers={false}
       />
-      <FireParticles />
 
       <PathVisualizer curve={curve} lineNbPoints={LINE_NB_POINTS} />
 

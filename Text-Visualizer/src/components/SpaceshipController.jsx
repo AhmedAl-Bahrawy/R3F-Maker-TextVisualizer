@@ -1,6 +1,5 @@
 // components/SpaceshipController.jsx
 import React, { forwardRef } from "react";
-import { Float } from "@react-three/drei";
 
 const SpaceshipController = forwardRef(({ children }, ref) => {
   return (
