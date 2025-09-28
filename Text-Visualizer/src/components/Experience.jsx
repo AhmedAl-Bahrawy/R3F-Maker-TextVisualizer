@@ -9,6 +9,7 @@ import HelperLines from "./HelperLines";
 import SpaceshipController from "./SpaceshipController";
 import PathVisualizer from "./PathVisualizer";
 import TextViewer from "./TextViewer";
+import FireParticles from "./FireParticles";
 
 const LINE_NB_POINTS = 10000;
 
@@ -101,6 +102,7 @@ export default function Experience() {
         spaceshipRef={spaceshipRef}
         useHelpers={false}
       />
+      <FireParticles />
 
       <PathVisualizer curve={curve} lineNbPoints={LINE_NB_POINTS} />
 
